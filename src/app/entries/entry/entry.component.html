@@ -4,3 +4,10 @@
     <img src="{{photo}}">
     <figcaption>{{description}}</figcaption>
 </figure>
+<div class="actions">
+<button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}">❤</button> 
+<!--Binding the click event to a boolean "isLiked" so the user doesn't submit a form-->
+<!--Adding the ng class attribute directive and assigning the "liked" class to the element
+with the isLiked boolean-->
+</div>
+
