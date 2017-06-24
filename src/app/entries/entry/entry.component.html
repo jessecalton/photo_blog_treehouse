@@ -5,9 +5,15 @@
     <figcaption>{{description}}</figcaption>
 </figure>
 <div class="actions">
-<button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}">❤</button> 
-<!--Binding the click event to a boolean "isLiked" so the user doesn't submit a form-->
-<!--Adding the ng class attribute directive and assigning the "liked" class to the element
-with the isLiked boolean-->
+    <button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}">❤</button> 
+    <!--Binding the click event to a boolean "isLiked" so the user doesn't submit a form-->
+    <!--Adding the ng class attribute directive and assigning the "liked" class to the element
+    with the isLiked boolean-->
+    <button type="button" (click)="showComments = !showComments">Comments ({{comments.length}})</button>
+</div>
+<div class="comments" *ngIf="showComments">
+    <div class="comment" *ngFor="let comment of comments">
+        <p><strong>{{comment.name}}</strong>{{comment.comment}}</p>
+    </div>
 </div>
 
