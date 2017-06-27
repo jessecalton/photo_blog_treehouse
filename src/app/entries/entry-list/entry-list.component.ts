@@ -1,5 +1,6 @@
 import {Component} from '@angular/core'; //import the Component decorator from the angular core
 
+
 @Component({
     selector: 'app-entry-list', //use all lowercase letters for selector and use kebab case
     templateUrl: 'entry-list.component.html',
@@ -9,6 +10,8 @@ import {Component} from '@angular/core'; //import the Component decorator from t
 
 // create and export component class
 export class EntryListComponent {
+    constructor() {
 
+    }
 
 }
