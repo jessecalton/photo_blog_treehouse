@@ -1,1 +1,4 @@
-<app-entry></app-entry>
+<app-entry *ngFor="let entry of entries" [entry]="entry"></app-entry>
+<!--looping over entries-->
+<!--* Square brackets on left side of equals sign to indicate it’s a property on the entry component
+* The data goes on the right * They have the same name in this case-->

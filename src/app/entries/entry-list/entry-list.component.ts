@@ -16,6 +16,8 @@ export class EntryListComponent implements OnInit {
 // make the injected service private or public so it gets added to the prototype and can be available on other methods inside the component
     }
     ngOnInit() {
-
+        this.entryService
+                .getEntries()
+                .then(entries => this.entries = entries);
     }
 }
