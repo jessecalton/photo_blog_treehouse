@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api'; // this so all of Angular can use the package
 import { AppComponent } from './app.component'; // importing AppComponents into AppModule
 import { EntryListComponent, EntryComponent, EntryService } from './entries';
@@ -15,6 +16,7 @@ import { InMemoryEntryService } from './backend'; // from the backend file we cr
     imports: [
         BrowserModule,
         HttpModule,
+        FormsModule,
         InMemoryWebApiModule.forRoot(InMemoryEntryService)
     ],
     providers: [ EntryService ],
