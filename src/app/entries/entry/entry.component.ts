@@ -14,5 +14,7 @@ import { Entry } from '../shared/entry.model';
 export class EntryComponent {
     @Input() entry: Entry;
     // assigning the Entry type to the entry property
-
+    onCommentAdded(comment: {name: string; comment: string;}) { //setting the type defition of our comment. Also called inline definition
+        this.entry.comments.push(comment)
+    }
 }

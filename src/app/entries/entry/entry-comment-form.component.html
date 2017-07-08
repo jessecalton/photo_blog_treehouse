@@ -1,7 +1,9 @@
 <!--Behind the scenes, Angular will pick up on the form and apply the NG Form directive, since we
 installed the FormsModule earlier-->
 
-<form (submit)="onSubmit()">
+<form (submit)="onSubmit()" #commentForm="ngForm">
+    <!--One-way data binding! The event on the left triggers the method on the right-->
+    <!--The thing with the pound sign is a LOCAL variable-->
     <div>
         <label for="name">Name</label>
         <input type="text" name="name" [(ngModel)]="name" /> 
