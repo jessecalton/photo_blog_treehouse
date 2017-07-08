@@ -13,6 +13,11 @@ export class EntryService {
     }
     // use a colon after the parentheses and type the return type; in our case, it's an array entries
     
+    addComment(entryId: number, comment: { name: string; comment: string; }) {
+        return this.http.post(`/app/entries/${entryId}/comments`, comment)
+            .toPromise();
+    }
+
     getEntries(): Promise<Entry[]> { 
         return this.http.get('/app/entries')
         .toPromise()
