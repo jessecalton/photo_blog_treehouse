@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api'; // this so all of Angular can use the package
 import { AppComponent } from './app.component'; // importing AppComponents into AppModule
-import { EntryListComponent, EntryComponent, EntryService } from './entries';
+import { EntryListComponent, EntryComponent, EntryService, EntryCommentFormComponent } from './entries';
 import { InMemoryEntryService } from './backend'; // from the backend file we created
 
 // exporting the AppModule class so we can use it in our main.ts file
@@ -22,7 +22,9 @@ import { InMemoryEntryService } from './backend'; // from the backend file we cr
     providers: [ EntryService ],
     declarations: [AppComponent, 
     EntryComponent,
-    EntryListComponent], // registering all our application's components
+    EntryListComponent,
+    EntryCommentFormComponent
+    ], // registering all our application's components
     bootstrap: [AppComponent] // start AppComponent at launch
 })
 export class AppModule {
