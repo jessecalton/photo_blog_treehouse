@@ -18,6 +18,7 @@ export class EntryCommentFormComponent {
 
     onSubmit(commentForm: NgForm) {
         // the commentForm var we pass into the submit function will be an instance of NgForm
+        if (this.commentForm.invalid) return;
         let comment = { name: this.name, comment: this.comment }; // create the comment
         this.entryService.addComment(this.entryId, comment)
             .then(() => {
