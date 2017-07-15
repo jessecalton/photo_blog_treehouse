@@ -6,12 +6,13 @@ installed the FormsModule earlier-->
     <!--The thing with the pound sign is a LOCAL variable-->
     <div>
         <label for="name">Name</label>
-        <input type="text" name="name" [(ngModel)]="name" /> 
+        <input type="text" name="name" [(ngModel)]="name" required minlength="3"/> 
         <!--Two way Data Binding!-->
+        <!--We put "required" after the name attribute for validation purposes-->
     </div>
     <div>
         <label for="comment">Comment</label>
-        <textarea name="comment" [(ngModel)]="comment"></textarea>
+        <textarea name="comment" [(ngModel)]="comment" required minlength="3"></textarea>
     </div>
     <div>
         <button>Submit</button>
